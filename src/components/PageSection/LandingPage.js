@@ -28,7 +28,7 @@ const LandingPage = () => {
             src={`http:${data.contentfulAsset.fixed.src}`}
             alt=""
           />
-          {console.log(data.contentfulAsset)}
+          {console.log("asset", data)}
         </div>
       ) : (
         ""
