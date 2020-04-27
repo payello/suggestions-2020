@@ -22,13 +22,13 @@ const LandingPage = () => {
 
   return (
     <>
+      {console.log("asset1", data)}
       {data.contentfulAsset && data.contentfulAsset.fixed ? (
         <div>
           <LandingImageStyles
-            src={`http:${data.contentfulAsset.fixed.src}`}
+            src={`https:${data.contentfulAsset.fixed.src}`}
             alt=""
           />
-          {console.log("asset", data)}
         </div>
       ) : (
         ""
