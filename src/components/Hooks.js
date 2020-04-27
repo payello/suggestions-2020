@@ -2,10 +2,19 @@ import React from "react"
 import { useState, useEffect } from "react"
 
 function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window
-  return {
-    width,
-    height,
+  if (
+    typeof window !== "undefined" &&
+    window &&
+    window.innerHeight &&
+    window.innerWidth
+  ) {
+    const { innerWidth: width, innerHeight: height } = window
+    return {
+      width,
+      height,
+    }
+  } else {
+    return 0
   }
 }
 

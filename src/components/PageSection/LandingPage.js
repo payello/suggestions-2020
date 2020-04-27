@@ -22,7 +22,7 @@ const LandingPage = () => {
 
   return (
     <>
-      {data.contentfulAsset && data.contentfulAsset.fixed.src ? (
+      {data.contentfulAsset && data.contentfulAsset.fixed ? (
         <LandingImageStyles
           src={`http:${data.contentfulAsset.fixed.src}`}
           alt=""
