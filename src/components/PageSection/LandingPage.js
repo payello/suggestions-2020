@@ -22,10 +22,14 @@ const LandingPage = () => {
 
   return (
     <>
-      <LandingImageStyles
-        src={`http:${data.contentfulAsset.fixed.src}`}
-        alt=""
-      />
+      {data.contentfulAsset ? (
+        <LandingImageStyles
+          src={`http:${data.contentfulAsset.fixed.src}`}
+          alt=""
+        />
+      ) : (
+        ""
+      )}
     </>
   )
 }
