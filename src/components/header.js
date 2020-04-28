@@ -9,7 +9,7 @@ import MdArrowDroprightCircle from "react-ionicons/lib/MdArrowDroprightCircle"
 const NavStyles = styled.nav`
   border-bottom: 1px solid #c0c0c0;
   width: 100%;
-  background-color: #1a1a1a;
+  background-color: #030708;
 
   ul {
     display: flex;

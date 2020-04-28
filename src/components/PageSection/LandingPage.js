@@ -5,12 +5,13 @@ import styled from "styled-components"
 
 const LandingImageStyles = styled.img`
   width: 100%;
+  margin-top: 5rem;
 `
 
 const LandingPage = () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
-      contentfulAsset {
+      contentfulAsset(title: { eq: "header-logo" }) {
         title
         fixed(width: 1700) {
           src
@@ -26,13 +27,12 @@ const LandingPage = () => {
         <div>
           <LandingImageStyles
             src={`https:${data.contentfulAsset.fixed.src}`}
-            alt=""
+            alt={data.contentfulAsset.title}
           />
         </div>
       ) : (
         ""
       )}
-      <div>Landing page</div>
     </>
   )
 }
