@@ -22,7 +22,6 @@ const LandingPage = () => {
 
   return (
     <>
-      {console.log("asset1", data)}
       {data.contentfulAsset && data.contentfulAsset.fixed ? (
         <div>
           <LandingImageStyles
@@ -33,6 +32,7 @@ const LandingPage = () => {
       ) : (
         ""
       )}
+      <div>Landing page</div>
     </>
   )
 }

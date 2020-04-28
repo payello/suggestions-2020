@@ -1,5 +1,9 @@
 import React from "react"
 
-const BandBio = () => <>Band bio</>
+const BandBio = () => (
+  <>
+    <div>Band bio</div>
+  </>
+)
 
 export default BandBio

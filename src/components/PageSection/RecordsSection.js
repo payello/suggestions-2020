@@ -64,12 +64,10 @@ const RecordsStyling = () => {
       }
     }
   `)
-
   return (
     <RecordsStyles>
       {records.allContentfulRecords.nodes.map(record => (
         <RecordSingleStyle key={record.id}>
-          {console.log(record)}
           {record.song && record.song.title ? (
             <h3>{record.song.title}</h3>
           ) : null}
@@ -88,7 +86,7 @@ const RecordsStyling = () => {
             <div className="no-audio">No audio to show</div>
           ) : null}
         </RecordSingleStyle>
-      ))}
+      ))}{" "}
     </RecordsStyles>
   )
 }
