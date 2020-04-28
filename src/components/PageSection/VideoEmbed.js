@@ -35,7 +35,7 @@ const VideoEmbed = () => {
       <EmbedContainerStyling>
         {VideoEmbed.allContentfulYoutubeEmbeds.edges.map(youtube => (
           <div key={youtube.node.id} className="embedContainerStyling">
-            {console.log("height", height)}
+            {console.log("1height", height, youtube)}
             <iframe
               title={youtube.node.youTubeId}
               width={height * 1.5}
