@@ -2,19 +2,10 @@ import { useState, useEffect } from "react"
 import { window } from "browser-monads"
 
 function getWindowDimensions() {
-  if (
-    typeof window !== "undefined" &&
-    window &&
-    window.innerHeight &&
-    window.innerWidth
-  ) {
-    const { innerWidth: width, innerHeight: height } = window
-    return {
-      width,
-      height,
-    }
-  } else {
-    return 0
+  const { innerWidth: width, innerHeight: height } = window
+  return {
+    width,
+    height,
   }
 }
 
