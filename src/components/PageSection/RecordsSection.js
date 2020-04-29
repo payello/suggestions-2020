@@ -95,7 +95,9 @@ const RecordsStyling = () => {
             </audio>
           ) : null}
           {!record.song ? (
-            <div className="no-audio">No audio to show</div>
+            <div className="no-audio">
+              <p>No audio to show</p>
+            </div>
           ) : null}
         </div>
       ))}{" "}
