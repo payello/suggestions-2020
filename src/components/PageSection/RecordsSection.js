@@ -2,36 +2,48 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
-const RecordSingleStyle = styled.div`
-  width: 33%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  padding: 3rem;
-
-  h3 {
-    text-align: center;
-    color: #fff;
-    text-transform: uppercase;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  .no-audio {
-    height: 40px;
-  }
-`
-
 const RecordsStyles = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
+  flex-wrap: wrap;
+
+  .recordSingle {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 3rem;
+
+    h3 {
+      text-align: center;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .no-audio {
+      height: 40px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .recordSingle {
+      width: 100%;
+
+      img {
+        max-width: 500px;
+        align-self: center;
+      }
+    }
+  }
 `
 
 const RecordsStyling = () => {
@@ -67,7 +79,7 @@ const RecordsStyling = () => {
   return (
     <RecordsStyles>
       {records.allContentfulRecords.nodes.map(record => (
-        <RecordSingleStyle key={record.id}>
+        <div className="recordSingle" key={record.id}>
           {record.song && record.song.title ? (
             <h3>{record.song.title}</h3>
           ) : null}
@@ -85,7 +97,7 @@ const RecordsStyling = () => {
           {!record.song ? (
             <div className="no-audio">No audio to show</div>
           ) : null}
-        </RecordSingleStyle>
+        </div>
       ))}{" "}
     </RecordsStyles>
   )
