@@ -37,8 +37,8 @@ const VideoEmbed = () => {
           <div key={youtube.node.id} className="embedContainerStyling">
             <iframe
               title={youtube.node.youTubeId}
-              width="1100"
-              height="650"
+              width={width * 0.9}
+              height={height * 0.9}
               src={`https://www.youtube.com/embed/${youtube.node.youTubeId}`}
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
