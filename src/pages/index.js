@@ -1,5 +1,5 @@
 import React from "react"
-import BandBio from "../components/BandBio"
+import BandBio from "../components/PageSection/BandBio"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import VideoEmbed from "../components/PageSection/VideoEmbed"

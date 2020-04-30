@@ -77,7 +77,7 @@ const RecordsStyling = () => {
     }
   `)
   return (
-    <RecordsStyles>
+    <RecordsStyles id="tracks">
       {records.allContentfulRecords.nodes.map(record => (
         <div className="recordSingle" key={record.id}>
           {record.song && record.song.title ? (
