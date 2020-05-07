@@ -31,6 +31,11 @@ const RecordsStyles = styled.div`
 
     .no-audio {
       height: 40px;
+      text-align: center;
+
+      p {
+        color: #fff;
+      }
     }
   }
 

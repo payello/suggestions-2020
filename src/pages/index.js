@@ -11,8 +11,8 @@ const IndexPage = () => (
     <Layout>
       <SEO title="Home" />
       <LandingPage />
-      <RecordsStyling />
       <VideoEmbed />
+      <RecordsStyling />
       <BandBio />
     </Layout>
   </>
