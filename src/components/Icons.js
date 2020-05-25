@@ -11,6 +11,7 @@ export const Facebook = props => (
     href="https://facebook.com/thesuggestionsband"
   >
     <LogoFacebook color={props.color} fontSize="24px" />
+    {props.title ? props.title : ""}
   </a>
 )
 
@@ -19,9 +20,10 @@ export const Instagram = props => (
     rel="noopener noreferrer nofollow"
     target="_blank"
     className="socialLink"
-    href="https:instagram.com/thesuggestions"
+    href="https://instagram.com/thesuggestions"
   >
     <LogoInstagram color={props.color} fontSize="24px" />
+    {props.title ? props.title : ""}
   </a>
 )
 
@@ -33,5 +35,6 @@ export const Email = props => (
     href="mailto:thesuggestionsuk@gmail.com?subject=We are looking to book a great band!&body=Hi Tom,%0D%0A%0D%0AWe are looking to book a function band!"
   >
     <MdMail color={props.color} fontSize="24px" />
+    {props.title ? props.title : ""}
   </a>
 )

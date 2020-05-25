@@ -4,6 +4,7 @@ import styled from "styled-components"
 import LogoFacebook from "react-ionicons/lib/LogoFacebook"
 import LogoInstagram from "react-ionicons/lib/LogoInstagram"
 import MdMail from "react-ionicons/lib/MdMail"
+import { Facebook, Instagram, Email } from "../Icons"
 
 const BandBioStyles = styled.div`
   margin-top: 2rem;
@@ -135,15 +136,9 @@ const BandBio = () => {
               with us.
             </p>
             <div className="socialContainer">
-              <a className="socialLink" href="https://facebook.com">
-                <LogoFacebook color="#fff" fontSize="24px" /> Facebook
-              </a>
-              <a className="socialLink" href="https:instagram.com">
-                <LogoInstagram color="#fff" fontSize="24px" /> Instagram
-              </a>
-              <a className="socialLink" href="https:instagram.com">
-                <MdMail color="#fff" fontSize="24px" /> Email
-              </a>
+              <Facebook color="#fff" title="Facebook" />
+              <Instagram color="#fff" title="Instagram" />
+              <Email color="#fff" title="Email" />
             </div>
           </div>
         </div>

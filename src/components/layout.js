@@ -81,7 +81,14 @@ const Layout = ({ children }) => {
             </div>
             <div className="copyright">
               <p>© {new Date().getFullYear()}, The Suggestions Website - </p>
-              <a href="https://peteraw.co.uk"> Peter Ayello-Wright</a>
+              <a
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+                href="https://peteraw.co.uk"
+              >
+                {" "}
+                Peter Ayello-Wright
+              </a>
             </div>
           </div>
         </Footer>

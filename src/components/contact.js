@@ -1,6 +1,5 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import { Facebook, Instagram, Mail } from "./Icons"
 
 const Contact = () => (
   <>
@@ -10,10 +9,10 @@ const Contact = () => (
     </p>
     <ul>
       <li>
-        <span>Email</span>Email
+        <Facebook />
       </li>
       <li>
-        <span>Instagram</span>Instagram
+        <Instagram />
       </li>
     </ul>
   </>
