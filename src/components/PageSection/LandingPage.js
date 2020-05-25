@@ -6,6 +6,10 @@ import styled from "styled-components"
 const LandingImageStyles = styled.img`
   width: 100%;
   margin-top: 5rem;
+
+  @media (max-width: 1200px) {
+    margin-top: 10rem;
+  }
 `
 
 const LandingPage = () => {
