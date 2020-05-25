@@ -139,8 +139,6 @@ const Header = ({ siteTitle }) => {
   )
 }
 
-// gold
-
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }

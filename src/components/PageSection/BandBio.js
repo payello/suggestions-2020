@@ -64,8 +64,8 @@ const BandBioStyles = styled.div`
       }
 
       &:hover {
-        background: gold;
-        color: black;
+        background: #c4a66a;
+        color: #000;
 
         svg {
           fill: black;
