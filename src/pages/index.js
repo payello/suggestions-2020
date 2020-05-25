@@ -10,7 +10,7 @@ import InstaFeed from "../components/PageSection/InstaFeed"
 const IndexPage = () => (
   <>
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Funk / Soul / Disco band, London, UK" />
       <LandingPage />
       <VideoEmbed />
       <RecordsStyling />

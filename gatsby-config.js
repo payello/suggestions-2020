@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `The Suggestions`,
+    description: `Funk / Soul / Disco band based in London, UK. Available for parties, weddings, birthdays etc. Playing music from the golden age of soul to the present day.`,
+    author: `@thesuggestions`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

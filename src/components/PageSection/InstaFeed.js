@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { InstaFeedStyles } from "../styles/InstaFeedStyles"
 
-// const url = `http://localhost:9000/.netlify/functions/instagram`
-const url = `/.netlify/functions/instagram`
+const url = `http://localhost:9000/.netlify/functions/instagram`
+// const url = `/.netlify/functions/instagram`
 
 function useInstagram() {
   const [posts, setPosts] = useState([])

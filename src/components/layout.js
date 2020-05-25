@@ -8,6 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import LogoFacebook from "react-ionicons/lib/LogoFacebook"
+import LogoInstagram from "react-ionicons/lib/LogoInstagram"
+import MdMail from "react-ionicons/lib/MdMail"
+import styled from "styled-components"
 
 import Header from "./header"
 import "./layout.css"
@@ -23,6 +27,37 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const Footer = styled.footer`
+    background: white;
+
+    .footerSocialIconContainer {
+      display: flex;
+      justify-content: center;
+      margin: 0 1rem 1rem;
+      padding: 1rem;
+      align-content: center;
+
+      .socialLink {
+        margin: 1rem;
+        padding: 1rem;
+      }
+    }
+    .copyright {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 1rem;
+
+      p {
+        color: black;
+        text-align: center;
+        display: inline-block;
+      }
+      a {
+        color: black;
+      }
+    }
+  `
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
@@ -33,11 +68,25 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer>
+          <div className="footerContainer">
+            <div className="footerSocialIconContainer">
+              <a className="socialLink" href="https://facebook.com">
+                <LogoFacebook color="#000" fontSize="24px" />
+              </a>
+              <a className="socialLink" href="https:instagram.com">
+                <LogoInstagram color="#000" fontSize="24px" />
+              </a>
+              <a className="socialLink" href="https:instagram.com">
+                <MdMail color="#000" fontSize="24px" />
+              </a>
+            </div>
+            <div className="copyright">
+              <p>© {new Date().getFullYear()}, The Suggestions Website - </p>
+              <a href="https://peteraw.co.uk"> Peter Ayello-Wright</a>
+            </div>
+          </div>
+        </Footer>
       </div>
     </>
   )

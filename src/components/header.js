@@ -19,6 +19,7 @@ const NavStyles = styled.nav`
 
     li {
       margin: 1rem 2rem;
+      font-weight: 300;
 
       a {
         text-transform: uppercase;
@@ -35,7 +36,16 @@ const NavStyles = styled.nav`
       }
     }
   }
+  @media (max-width: 1200px) {
+    .navbar-links {
+      flex-wrap: wrap;
+      justify-content: center;
 
+      &__item-title {
+        width: 100%;
+      }
+    }
+  }
   span.navbar-heading {
     text-transform: uppercase;
     color: #fff;
@@ -74,7 +84,7 @@ const Header = ({ siteTitle }) => {
     <HeaderStyles>
       <NavStyles>
         <ul className="navbar-links">
-          <li className="navbar-links__item">
+          <li className="navbar-links__item navbar-links__item-title">
             <a href="#">
               <span className="navbar-heading">
                 <MdArrowDroprightCircle color="#fff" />
@@ -85,10 +95,10 @@ const Header = ({ siteTitle }) => {
           <li className="navbar-links__item">
             <a href="#bio">Bio</a>
           </li>
-          <li>
+          <li className="navbar-links__item">
             <a href="#tracks">Tracks</a>
           </li>
-          <li>
+          <li className="navbar-links__item">
             <a href="#contact">Contact</a>
           </li>
         </ul>

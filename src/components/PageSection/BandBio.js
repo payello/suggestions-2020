@@ -24,13 +24,16 @@ const BandBioStyles = styled.div`
     justify-content: space-between;
 
     .innerTextContainer {
-      border: 2px solid #fff;
-      padding: 2rem;
-      margin: 2rem 0;
+      padding: 1rem;
+      border-bottom: 1px solid rgb(119, 119, 119);
     }
 
-    p {
+    .bandBioDesc {
       color: #fff;
+      text-align: center;
+      margin: 1rem 0;
+      font-family: "Crimson Text", serif;
+      font-size: 18px;
     }
   }
 
@@ -40,13 +43,9 @@ const BandBioStyles = styled.div`
     h3 {
       text-align: center;
       text-transform: uppercase;
+      font-weight: 300;
     }
-
-    .bandBioDesc {
-      margin: 1rem 0;
-      color: #fff;
-    }
-    a {
+    .socialLink {
       color: #fff;
       margin: 0 auto;
       text-decoration: none;
@@ -57,6 +56,7 @@ const BandBioStyles = styled.div`
       border-radius: 5px;
       width: 125px;
       text-align: center;
+      font-weight: 300;
 
       svg {
         margin-right: 5px;
@@ -123,7 +123,7 @@ const BandBio = () => {
       <div className="bandBioTextContainer">
         <div className="innerTextContainer">
           {bandBio.contentfulBandBio.bandBioText.content.map(data => (
-            <p>{data.content[0].value}</p>
+            <p className="bandBioDesc">{data.content[0].value}</p>
           ))}
         </div>
 
@@ -135,13 +135,13 @@ const BandBio = () => {
               with us.
             </p>
             <div className="socialContainer">
-              <a href="https://facebook.com">
+              <a className="socialLink" href="https://facebook.com">
                 <LogoFacebook color="#fff" fontSize="24px" /> Facebook
               </a>
-              <a href="https:instagram.com">
+              <a className="socialLink" href="https:instagram.com">
                 <LogoInstagram color="#fff" fontSize="24px" /> Instagram
               </a>
-              <a href="https:instagram.com">
+              <a className="socialLink" href="https:instagram.com">
                 <MdMail color="#fff" fontSize="24px" /> Email
               </a>
             </div>

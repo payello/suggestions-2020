@@ -22,6 +22,7 @@ const RecordsStyles = styled.div`
       text-align: center;
       color: #fff;
       text-transform: uppercase;
+      font-weight: 300;
     }
 
     img {
