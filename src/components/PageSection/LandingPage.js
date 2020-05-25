@@ -10,6 +10,9 @@ const LandingImageStyles = styled.img`
   @media (max-width: 1200px) {
     margin-top: 10rem;
   }
+  @media (max-width: 767px) {
+    margin-top: 15rem;
+  }
 `
 
 const LandingPage = () => {

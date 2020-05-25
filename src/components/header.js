@@ -36,6 +36,16 @@ const NavStyles = styled.nav`
       }
     }
   }
+  span.navbar-heading {
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    svg {
+      margin: 0 1rem;
+    }
+  }
+
   @media (max-width: 1200px) {
     .navbar-links {
       flex-wrap: wrap;
@@ -46,13 +56,18 @@ const NavStyles = styled.nav`
       }
     }
   }
-  span.navbar-heading {
-    text-transform: uppercase;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    svg {
-      margin: 0 1rem;
+
+  @media (max-width: 767px) {
+    .navbar-links {
+      padding: 2rem 5rem;
+    }
+
+    .navbar-links__item {
+      width: 75px;
+    }
+
+    .navbar-links__item-title {
+      width: 100%;
     }
   }
 `
@@ -69,6 +84,14 @@ const SocialIcons = styled.div`
     &:hover {
       fill: #c0c0c0;
     }
+  }
+
+  @media (max-width: 767px) {
+    top: unset;
+    bottom: -5px;
+    right: unset;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 `
 

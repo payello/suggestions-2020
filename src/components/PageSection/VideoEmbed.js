@@ -8,6 +8,11 @@ const EmbedContainerStyling = styled.div`
     display: flex;
     justify-content: center;
     margin: 0 auto;
+
+    iframe {
+      width: 100%;
+      height: 80vh;
+    }
   }
 `
 
@@ -37,12 +42,12 @@ const VideoEmbed = () => {
           <div key={youtube.node.id} className="embedContainerStyling">
             <iframe
               title={youtube.node.youTubeId}
-              width={width ? width * 0.9 : 700}
-              height={height ? height * 0.9 : 500}
               src={`https://www.youtube.com/embed/${youtube.node.youTubeId}`}
               frameBorder="0"
-              // allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              webkitallowfullscreen="true"
+              mozallowfullscreen="true"
             ></iframe>
           </div>
         ))}
