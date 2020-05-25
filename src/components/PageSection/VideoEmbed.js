@@ -41,7 +41,7 @@ const VideoEmbed = () => {
               height={height ? height * 0.9 : 500}
               src={`https://www.youtube.com/embed/${youtube.node.youTubeId}`}
               frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              // allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
           </div>
