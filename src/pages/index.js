@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import VideoEmbed from "../components/PageSection/VideoEmbed"
 import LandingPage from "../components/PageSection/LandingPage"
 import RecordsStyling from "../components/PageSection/RecordsSection"
+import InstaFeed from "../components/PageSection/InstaFeed"
 
 const IndexPage = () => (
   <>
@@ -14,6 +15,7 @@ const IndexPage = () => (
       <VideoEmbed />
       <RecordsStyling />
       <BandBio />
+      <InstaFeed />
     </Layout>
   </>
 )
