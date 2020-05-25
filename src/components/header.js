@@ -2,6 +2,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import LogoFacebook from "react-ionicons/lib/LogoFacebook"
+import { Facebook } from "./Icons"
+import { Instagram } from "./Icons"
 import LogoInstagram from "react-ionicons/lib/LogoInstagram"
 import MdMail from "react-ionicons/lib/MdMail"
 import MdArrowDroprightCircle from "react-ionicons/lib/MdArrowDroprightCircle"
@@ -20,6 +22,7 @@ const NavStyles = styled.nav`
     li {
       margin: 1rem 2rem;
       font-weight: 300;
+      text-align: center;
 
       a {
         text-transform: uppercase;
@@ -59,11 +62,11 @@ const NavStyles = styled.nav`
 
   @media (max-width: 767px) {
     .navbar-links {
-      padding: 2rem 5rem;
+      padding: 2rem 0;
     }
 
     .navbar-links__item {
-      width: 75px;
+      width: 66px;
     }
 
     .navbar-links__item-title {
@@ -127,15 +130,9 @@ const Header = ({ siteTitle }) => {
         </ul>
       </NavStyles>
       <SocialIcons>
-        <a href="https://facebook.com">
-          <LogoFacebook color="#C4A66A" />
-        </a>
-        <a href="https://instagram.com">
-          <LogoInstagram color="#C4A66A" />
-        </a>
-        <a href="mailto=">
-          <MdMail color="#C4A66A" />
-        </a>
+        <Facebook color="#C4A66A" />
+        <Instagram color="#C4A66A" />
+        <Email color="#C4A66A" />
       </SocialIcons>
     </HeaderStyles>
   )

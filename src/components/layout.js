@@ -9,12 +9,16 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import LogoFacebook from "react-ionicons/lib/LogoFacebook"
+
 import LogoInstagram from "react-ionicons/lib/LogoInstagram"
 import MdMail from "react-ionicons/lib/MdMail"
 import styled from "styled-components"
 
 import Header from "./header"
 import "./layout.css"
+import { Facebook } from "./Icons"
+import { Instagram } from "./Icons"
+import { Email } from "./Icons"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -71,15 +75,9 @@ const Layout = ({ children }) => {
         <Footer>
           <div className="footerContainer">
             <div className="footerSocialIconContainer">
-              <a className="socialLink" href="https://facebook.com">
-                <LogoFacebook color="#000" fontSize="24px" />
-              </a>
-              <a className="socialLink" href="https:instagram.com">
-                <LogoInstagram color="#000" fontSize="24px" />
-              </a>
-              <a className="socialLink" href="https:instagram.com">
-                <MdMail color="#000" fontSize="24px" />
-              </a>
+              <Facebook color="#000" />
+              <Instagram color="#000" />
+              <Email color="#000" />
             </div>
             <div className="copyright">
               <p>© {new Date().getFullYear()}, The Suggestions Website - </p>
