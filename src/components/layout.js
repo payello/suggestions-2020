@@ -8,10 +8,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import LogoFacebook from "react-ionicons/lib/LogoFacebook"
-
-import LogoInstagram from "react-ionicons/lib/LogoInstagram"
-import MdMail from "react-ionicons/lib/MdMail"
 import styled from "styled-components"
 
 import Header from "./header"

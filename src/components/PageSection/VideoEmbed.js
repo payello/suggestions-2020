@@ -1,5 +1,4 @@
 import React from "react"
-import useWindowDimensions from "../Hooks"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
@@ -32,8 +31,6 @@ const VideoEmbed = () => {
       }
     }
   `)
-
-  const { height, width } = useWindowDimensions()
 
   return (
     <>

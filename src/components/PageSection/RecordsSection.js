@@ -93,11 +93,16 @@ const RecordsStyling = () => {
             <h3>{record.song_name}</h3>
           ) : null}
           {record.recordIcon && record.recordIcon.fixed.src ? (
-            <img src={`https:${record.recordIcon.fixed.src}`} alt="" />
+            <img
+              loading="lazy"
+              src={`https:${record.recordIcon.fixed.src}`}
+              alt=""
+            />
           ) : null}
           {record.song && record.song.file.url ? (
             <audio controls>
               <source src={`https:${record.song.file.url}`} type="audio/mpeg" />
+              <track></track>
             </audio>
           ) : null}
           {!record.song ? (

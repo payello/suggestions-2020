@@ -1,12 +1,9 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-import LogoFacebook from "react-ionicons/lib/LogoFacebook"
 import { Facebook } from "./Icons"
 import { Instagram } from "./Icons"
 import { Email } from "./Icons"
-import LogoInstagram from "react-ionicons/lib/LogoInstagram"
-import MdMail from "react-ionicons/lib/MdMail"
 import MdArrowDroprightCircle from "react-ionicons/lib/MdArrowDroprightCircle"
 
 const NavStyles = styled.nav`
@@ -112,7 +109,7 @@ const Header = ({ siteTitle }) => {
       <NavStyles>
         <ul className="navbar-links">
           <li className="navbar-links__item navbar-links__item-title">
-            <a href="#">
+            <a href="/">
               <span className="navbar-heading">
                 <MdArrowDroprightCircle color="#fff" />
                 The Suggestions

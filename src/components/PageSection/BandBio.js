@@ -1,9 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-import LogoFacebook from "react-ionicons/lib/LogoFacebook"
-import LogoInstagram from "react-ionicons/lib/LogoInstagram"
-import MdMail from "react-ionicons/lib/MdMail"
 import { Facebook, Instagram, Email } from "../Icons"
 
 const BandBioStyles = styled.div`
@@ -33,8 +30,8 @@ const BandBioStyles = styled.div`
       color: #fff;
       text-align: center;
       margin: 1rem 0;
-      font-family: "Crimson Text", serif;
       font-size: 18px;
+      font-weight: 300;
     }
   }
 
@@ -123,8 +120,10 @@ const BandBio = () => {
     <BandBioStyles id="bio" className="bandBio">
       <div className="bandBioTextContainer">
         <div className="innerTextContainer">
-          {bandBio.contentfulBandBio.bandBioText.content.map(data => (
-            <p className="bandBioDesc">{data.content[0].value}</p>
+          {bandBio.contentfulBandBio.bandBioText.content.map((data, key) => (
+            <p key={key} className="bandBioDesc">
+              {data.content[0].value}
+            </p>
           ))}
         </div>
 
@@ -145,6 +144,7 @@ const BandBio = () => {
       </div>
       <div className="bandBioImageContainer">
         <img
+          loading="lazy"
           className="bandBioImage"
           src={`https://${bandBio.contentfulBandBio.bandBioImage.fluid.src}`}
           alt=""

@@ -4,31 +4,18 @@ export const InstaFeedStyles = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  max-width: 1200px;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 1rem;
 
   .instaContainer {
-    width: 25%;
+    width: calc(100% / 3 - 6px);
     height: auto;
     position: relative;
+    margin: 0 3px;
     img {
       width: 100%;
     }
-
-    /* section.instaOverlay {
-      display: none;
-    }
-    .instaContainer:hover {
-      section.instaOverlay {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        z-index: 9999;
-        background-color: #333;
-        height: 100%;
-        color: red;
-        padding: 5px;
-        transform: translateY(-50%);
-      }
-    } */
   }
 `

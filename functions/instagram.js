@@ -2,9 +2,22 @@ require("isomorphic-fetch")
 
 const url = `https://www.instagram.com/graphql/query/?query_hash=44efc15d3c13342d02df0b5a9fa3d33f&variables={"id":"3174001547","first":24}`
 
+const cache = {
+  lastFetch: 0,
+  posts: [],
+}
+
 async function getPosts() {
+  const timeSinceLastFetch = Date.now() - cache.lastFetch
+  if (timeSinceLastFetch <= 1800000) {
+    return cache.posts
+  }
+
   const data = await fetch(url).then(res => res.json())
   const posts = slimUpPosts(data)
+
+  cache.lastFetch = Date.now()
+  cache.posts = posts
   return posts
 }
 

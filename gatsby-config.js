@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `The Suggestions`,
-    description: `Funk / Soul / Disco band based in London, UK. Available for parties, weddings, birthdays etc. Playing music from the golden age of soul to the present day.`,
+    description: `Funk / Soul / Disco band based in London, UK. Available for parties, weddings, birthdays etc. Playing music from the den age of soul to the present day.`,
     author: `@thesuggestions`,
   },
   plugins: [
