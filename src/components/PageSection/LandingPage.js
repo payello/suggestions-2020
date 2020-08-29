@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import MobileImage from "../data/mobileImage"
 
 const LandingImageStyles = styled.img`
   width: 100%;
@@ -11,6 +12,26 @@ const LandingImageStyles = styled.img`
   }
   @media (max-width: 767px) {
     margin-top: 15rem;
+  }
+`
+
+const LandingImageContainer = styled.div`
+  .landingImageMobile {
+    display: none;
+  }
+
+  .landingImageDesktop {
+    display: block;
+  }
+
+  @media (max-width: 767px) {
+    .landingImageDesktop {
+      display: none;
+    }
+
+    .landingImageMobile {
+      display: block;
+    }
   }
 `
 
@@ -27,15 +48,26 @@ const LandingPage = () => {
     }
   `)
 
+  const mobileImage = MobileImage()
+
   return (
     <>
+      {console.log(MobileImage(), data)}
       {data.contentfulAsset && data.contentfulAsset.fixed ? (
-        <div>
+        <LandingImageContainer>
           <LandingImageStyles
             src={`https:${data.contentfulAsset.fixed.src}`}
             alt={data.contentfulAsset.title}
+            class="landingImageDesktop"
           />
-        </div>
+          <h1>The Suggestions</h1>
+          <h3>Funk, soul and party music.</h3>
+          <LandingImageStyles
+            src={`https:${mobileImage.contentfulAsset.fixed.src}`}
+            alt={mobileImage.contentfulAsset.title}
+            class="landingImageMobile"
+          />
+        </LandingImageContainer>
       ) : (
         ""
       )}
